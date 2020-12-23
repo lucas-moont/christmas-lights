@@ -6,6 +6,7 @@
 body{
     background-color: #000;
     color: #FFF;
+    overflow: hidden;
 }
 
 h2{
@@ -37,6 +38,7 @@ h2{
     width: 15px;
     height: 30px;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
     top: 102px;
     background-color: #FFF;
     animation-name: even-flash;
@@ -58,6 +60,20 @@ h2{
     left: 0;
     background-color: #444;
     border-radius: 4px;
+}
+
+#wire li:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 26px;
+    border-bottom: 2px solid #444;
+    border-radius: 50%;
+    top: -20px;
+}
+
+#wire li:last-child::after{
+    display: none;
 }
 
 @keyframes even-flash{
@@ -83,6 +99,8 @@ h2{
         box-shadow: 0px 2px 20px 4px rgba(240, 26, 26, .3)
     }
 }
+
+
 
 /*  
     background-color: rgba(240, 26, 26, 1);
