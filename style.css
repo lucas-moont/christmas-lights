@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #000;
+    color: #FFF;
+}
+
+h2{
+    position: relative;
+    margin-top: 200px;
+    text-align: center;
+    letter-spacing: .2em;
+    font-size: 3em;
+    font-family: 'Mountains of Christmas', cursive;
+    text-shadow: 0px 0px 8px rgb(255, 65, 65);
+}
+
+#wire{
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    top: -80px;
+    border-bottom: 3px solid #222;
+    height: 100px;
+}
+
+#wire li{
+    position: relative;
+    list-style: none;
+    margin: 0 15px;
+    padding: 0;
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    border-radius: 50%;
+    top: 102px;
+    background-color: #FFF;
+    animation-name: even-flash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#wire li:nth-child(odd){
+    animation-name: odd-flash;
+}
+
+#wire li:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    top: -5px;
+    left: 0;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+@keyframes even-flash{
+    0%, 100%{
+        background-color: rgba(255, 230, 65, 1);
+        box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+        
+    }
+    50%{
+        background-color: rgba(255, 230, 65, .5);
+        box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, .3);
+    }
+}
+
+@keyframes odd-flash{
+    50%{
+        background-color: rgba(240, 26, 26, 1);
+        box-shadow: 0px 2px 20px 4px rgba(240, 26, 26, 1);
+        
+    }
+    0%, 100%{
+        background-color: rgba(240, 26, 26, .5);
+        box-shadow: 0px 2px 20px 4px rgba(240, 26, 26, .3)
+    }
+}
+
+/*  
+    background-color: rgba(240, 26, 26, 1);
+    box-shadow: 0px 2px 20px 4px rgba(240, 26, 26, 1)
+
+    background-color: rgba(240, 26, 26, .5);
+    box-shadow: 0px 2px 20px 4px rgba(240, 26, 26, .3)
+*/
